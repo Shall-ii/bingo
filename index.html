@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bingo</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <head>
+      <h1>Let's play the Bingo..!!</h1>
+    </head>
+    <main>
+      <audio src="bt2.wav" id="btLoad" preload="auto"></audio>
+      <audio src="bt.mp3" id="btClick" preload="auto"></audio>
+      <audio src="btWin.mp3" id="win" preload="auto"></audio>
+
+      <div class="outBody">
+        <div class="userMove">
+          <div class="symU">🡺</div>
+          <div class="turn">
+            User Turn <br />
+            to choose
+          </div>
+        </div>
+        <div class="binOutUser">
+          <div class="in1">
+            <div class="in101">B</div>
+            <div class="in101">I</div>
+            <div class="in101">N</div>
+            <div class="in101">G</div>
+            <div class="in101">O</div>
+          </div>
+          <div class="in2User">
+            <button
+              class="in2TemptUser"
+              onclick="
+              start(`in2User`, 'user', false, user, sys, 'sys', alot, activeUser);
+      
+              setTimeout(()=>{
+                document.querySelector('.in2TemptSys').click();
+                
+                setTimeout(()=>{
+                loadLog(activeUser, userLog);
+              }, 4000);
+              }, 700);
+            "
+            >
+              Let's play
+            </button>
+          </div>
+          <div class="in3">
+            <button class="in3bt">MARK</button>
+            <button class="in3bt">BINGO !</button>
+            <button class="in3bt">Reset</button>
+          </div>
+        </div>
+
+        <div class="display">
+          <div class="turnPl turnShow">Manish Choose the number</div>
+          <div class="turnSys turnShow">Computer choose the number</div>
+        </div>
+
+        <div class="binOutSys">
+          <div class="in1">
+            <div class="in101">B</div>
+            <div class="in101">I</div>
+            <div class="in101">N</div>
+            <div class="in101">G</div>
+            <div class="in101">O</div>
+          </div>
+          <div class="in2Sys">
+            <button
+              class="in2TemptSys"
+              onclick="start(`in2Sys`, 'sys', true, sys, user, 'user', alot, activeSys);
+              play();setTimeout(()=>{
+                loadLog(activeSys, sysLog);
+              }, 4000);"
+            >
+              Let's play
+            </button>
+          </div>
+          <div class="in3">
+            <button class="in3bt">MARK</button>
+            <button class="in3bt">BINGO !</button>
+            <button class="in3bt">Reset</button>
+          </div>
+        </div>
+
+        <div class="SysMove">
+          <div class="symS">🡸</div>
+          <div class="turn">
+            System Turn <br />
+            to choose
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+  </body>
+</html>

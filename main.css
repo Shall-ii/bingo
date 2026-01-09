@@ -1,0 +1,190 @@
+* {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.outBody {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.binOutUser,
+.binOutSys {
+  border: 4px solid green;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 500px;
+  animation: startEle 1.5s ease-in-out 0s 1 normal none;
+}
+.in1 {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 4px solid green;
+}
+
+.in101 {
+  font-size: 30px;
+  font-weight: 600px;
+  margin: 5px;
+  border: 3px solid red;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: yellow;
+}
+.in2User,
+.in2Sys {
+  box-sizing: border-box;
+  width: 90%;
+  height: 70%;
+  border: 3px solid green;
+  border-radius: 10px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 10px;
+}
+
+.in2TemptUser,
+.in2TemptSys {
+  /* width: 150px;
+  height: 40px; */
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 10px 25px;
+  animation: grow 1.5s infinite ease-in-out;
+}
+
+.in2TemptUser:hover,
+.in2TemptSys:hover {
+  background-color: rgb(177, 103, 247);
+  color: white;
+  font-weight: 600;
+}
+
+@keyframes startEle {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.in3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.in3bt {
+  border: 2px solid green;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.plBt {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgb(9, 59, 9);
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.symU {
+  font-size: 80px;
+  width: 100%;
+  animation: rightArr 1.5s infinite ease-in-out;
+}
+.symS {
+  font-size: 80px;
+  width: 100%;
+  animation: leftArr 1.5s infinite ease-in-out;
+}
+@keyframes rightArr {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(+60px);
+  }
+}
+@keyframes leftArr {
+  0% {
+    transform: translateX(+45px);
+  }
+  100% {
+    transform: translateX(-65px);
+  }
+}
+.userMove,
+.SysMove {
+  border: 3px solid black;
+  width: 10%;
+}
+
+.turn {
+  border: 5px solid rgb(14, 69, 14);
+  border-radius: 80px;
+  height: 80px;
+  width: 100px;
+  padding: 25px;
+  animation: turnEffect 1s ease-in-out infinite;
+  background-color: greenyellow;
+  margin-top: 80px;
+}
+
+@keyframes turnEffect {
+  0% {
+    transform: scale(0.8);
+    font-size: 25px;
+    font-weight: 400;
+  }
+  100% {
+    transform: scale(1.2);
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+.display {
+  width: 12%;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.turnPl,
+.turnSys {
+  width: 140px;
+  height: 140px;
+  border: 4px solid blue;
+  border-radius: 50px;
+  animation: turnEffect 1s ease-in-out infinite;
+  padding: 15px;
+  margin: 20px;
+  box-sizing: border-box;
+  display: none;
+}
